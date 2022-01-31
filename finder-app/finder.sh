@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #file: finder.sh
 #info: bash script whose 1st argument is a path to a directory on the filesystem, referred to 'filesdir' and

@@ -1,12 +1,11 @@
-CROSS_COMPILE =
+CC=$(CROSS_COMPILE)gcc
+CFLAGS=-I -g -Wall -Werror
 
-default: writer
+all: writer
 
-all: writer.o
-	$(CROSS_COMPILE)gcc -g -Wall writer.o -0 writer
+writer: writer.o
+	$(CC) -o writer writer.o
 	
-writer.o: writer.c
-	$(CROSS_COMPILE)gcc -g -Wall -c -o writer.o writer.c
-
+.PHONY: clean
 clean:
-	rm -f *.o writer
+	rm -f writer *.o
